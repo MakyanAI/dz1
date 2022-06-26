@@ -19,7 +19,7 @@ public class PrintCurrencyForecast {
             CurrencyRate cr = parsingListCurrencyRate.get(i);
             String localDate = LocalDate.now().plusDays(i+1).format(DateTimeFormatter.ofPattern("E dd.MM.yyyy"));
 
-            System.out.println(localDate + " - " + decimalFormat.format(Double.parseDouble(cr.getCurs())));
+            System.out.println(localDate + " - " + decimalFormat.format(Double.parseDouble(cr.getCurs()) / Double.parseDouble(cr.getNominal())));
 
         }
     }
