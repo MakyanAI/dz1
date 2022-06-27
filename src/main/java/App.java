@@ -1,10 +1,9 @@
-import repository.CurrencyRate;
-import service.UserController;
+import controller.ConsoleController;
 
 public class App {
 
     public static void main(String[] args) {
-
-        UserController.userInterface();
+        ConsoleController consoleController = new ConsoleController();
+        consoleController.userInterface();
     }
 }

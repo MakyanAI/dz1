@@ -6,13 +6,14 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
 
 
-public class CalcСurrencyForecast {
+public class CalculatorForecast {
 
     public static final double NUMBER_COURSES = 7.0;
 
-    public ArrayList<CurrencyRate> calculateCurrencyForecast(ArrayList<CurrencyRate> parsingListCurrencyRate, int countDay){
+    public List<CurrencyRate> calculateCurrencyForecast(List<CurrencyRate> parsingListCurrencyRate, int countDay){
 
         String cdx;
         String nominal;
