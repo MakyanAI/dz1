@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
 
 public class ReadFileCSV {
 
@@ -17,8 +16,7 @@ public class ReadFileCSV {
 
         try {
             int line = 0;
-//            int index = 0;
-            String row = "";
+            String row;
             InputStream inputStream = ReadFileCSV.class.getClassLoader().getResourceAsStream("RC_F01_06_2002_T17_06_2022_" + currency + ".csv");
             BufferedReader csvReader = new BufferedReader(new InputStreamReader(inputStream));
             ArrayList<CurrencyRate> listCurrencyRate = new ArrayList<CurrencyRate>();
@@ -26,14 +24,6 @@ public class ReadFileCSV {
             while ((row = csvReader.readLine()) != null && line <= NUMBER_COURSES) {
                 String[] data = row.split(";");
 
-//                if(line == 0){
-//                    for (int i = 0; i < data.length; i++){
-//                        if(data[i].equals("curs")) {
-//                            index = i;
-//                            break;
-//                        }
-//                    }
-//                }
                 if(line != 0){
                     listCurrencyRate.add(new CurrencyRate(data[0], data[1], data[2], data[3]));
                 }

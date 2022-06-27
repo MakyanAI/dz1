@@ -2,14 +2,11 @@ package utils;
 
 import repository.CurrencyRate;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
-public class ParsingCurrency {
+public class Parsing {
 
-    public ArrayList<CurrencyRate> parsingCurrencyList(ArrayList<CurrencyRate> listCurrencyRate){
+    public List<CurrencyRate> parsingCurrencyList(ArrayList<CurrencyRate> listCurrencyRate){
 
         ArrayList<CurrencyRate> parsingListCurrencyRate = new ArrayList<CurrencyRate>();
 

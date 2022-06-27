@@ -5,12 +5,12 @@ import repository.CurrencyRate;
 import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
-public class PrintCurrencyForecast {
+public class PrinterForecast {
 
-    public void printCurrencyForecastTomorrow(ArrayList<CurrencyRate> parsingListCurrencyRate){
+    public void printCurrencyForecastTomorrow(List<CurrencyRate> parsingListCurrencyRate){
 
         DecimalFormat decimalFormat = new DecimalFormat("###.##");
         Collections.reverse(parsingListCurrencyRate);
@@ -23,7 +23,7 @@ public class PrintCurrencyForecast {
 
         }
     }
-    public void printCurrencyForecastWeek(ArrayList<CurrencyRate> parsingListCurrencyRate) {
+    public void printCurrencyForecastWeek(List<CurrencyRate> parsingListCurrencyRate) {
 
         DecimalFormat decimalFormat = new DecimalFormat("###.##");
 
