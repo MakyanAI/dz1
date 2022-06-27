@@ -7,12 +7,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ReadFileCSV {
 
     public static final int NUMBER_COURSES = 7;
 
-    public ArrayList<CurrencyRate> readFileCSV(String currency) {
+    public List<CurrencyRate> readFileCSV(String currency) {
 
         try {
             int line = 0;

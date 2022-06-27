@@ -6,9 +6,9 @@ import java.util.*;
 
 public class Parsing {
 
-    public List<CurrencyRate> parsingCurrencyList(ArrayList<CurrencyRate> listCurrencyRate){
+    public List<CurrencyRate> parsingCurrencyList(List<CurrencyRate> listCurrencyRate){
 
-        ArrayList<CurrencyRate> parsingListCurrencyRate = new ArrayList<CurrencyRate>();
+        List parsingListCurrencyRate = new ArrayList<>();
 
         for (CurrencyRate ctr : listCurrencyRate) {
 
