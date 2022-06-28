@@ -7,13 +7,14 @@ import java.util.List;
 
 public class Forecaster {
 
+    ReadFileCSV readFileCSV = new ReadFileCSV();
+    Parsing parsingCurrency = new Parsing();
+
     public List<CurrencyRate> rateTomorrow(String currencyForecast){
 
-        ReadFileCSV readFileCSV = new ReadFileCSV();
-        Parsing parsingCurrency = new Parsing();
-        CalculatorForecast calcСurrencyForecast = new CalculatorForecast();
+        CalculatorForecast calculatorForecast = new CalculatorForecast();
 
-        return calcСurrencyForecast.calculateCurrencyForecast(
+        return calculatorForecast.calculateCurrencyForecast(
                 parsingCurrency.parsingCurrencyList(
                         readFileCSV.readFileCSV(currencyForecast)), 1);
 
@@ -21,11 +22,9 @@ public class Forecaster {
 
     public List<CurrencyRate> rateWeek(String currencyForecast){
 
-        ReadFileCSV readFileCSV = new ReadFileCSV();
-        Parsing parsingCurrency = new Parsing();
-        CalculatorForecast calcСurrencyForecast = new CalculatorForecast();
+        CalculatorForecast calculatorForecast = new CalculatorForecast();
 
-        return calcСurrencyForecast.calculateCurrencyForecast(
+        return calculatorForecast.calculateCurrencyForecast(
                 parsingCurrency.parsingCurrencyList(
                         readFileCSV.readFileCSV(currencyForecast)), 7);
     }
